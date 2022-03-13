@@ -13,7 +13,7 @@ class TvShowItem(
 ) : BindableItem<ItemTvShowBinding>() {
     override fun getLayout() = R.layout.item_tv_show
 
-    override fun bind(view: ItemTvShowBinding, position: Int) {
+    override fun bind(view: ItemTvShowBinding, position: Int) = with(view){
         view.tvShowName.text = entity.title
         view.ivShowRating.rating = entity.rating
         view.content.setOnClickListener {

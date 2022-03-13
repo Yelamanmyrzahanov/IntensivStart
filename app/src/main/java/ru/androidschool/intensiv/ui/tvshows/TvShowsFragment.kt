@@ -23,7 +23,7 @@ class TvShowsFragment : Fragment(R.layout.tv_shows_fragment) {
         inflater: LayoutInflater,
         container: ViewGroup?,
         savedInstanceState: Bundle?
-    ): View? {
+    ): View {
         _binding = TvShowsFragmentBinding.inflate(inflater, container, false)
         return binding.root
     }

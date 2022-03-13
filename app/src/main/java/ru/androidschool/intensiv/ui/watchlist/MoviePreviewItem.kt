@@ -1,11 +1,11 @@
 package ru.androidschool.intensiv.ui.watchlist
 
 import android.view.View
-import com.squareup.picasso.Picasso
 import com.xwray.groupie.viewbinding.BindableItem
 import ru.androidschool.intensiv.R
 import ru.androidschool.intensiv.data.Movie
 import ru.androidschool.intensiv.databinding.ItemSmallBinding
+import ru.androidschool.intensiv.ui.extensions.loadImage
 
 class MoviePreviewItem(
     private val content: Movie,
@@ -19,9 +19,7 @@ class MoviePreviewItem(
             onClick.invoke(content)
         }
         // TODO Получать из модели
-        Picasso.get()
-            .load("https://www.kinopoisk.ru/images/film_big/1143242.jpg")
-            .into(view.imagePreview)
+        view.imagePreview.loadImage("https://www.kinopoisk.ru/images/film_big/1143242.jpg")
     }
 
     override fun initializeViewBinding(v: View): ItemSmallBinding = ItemSmallBinding.bind(v)
